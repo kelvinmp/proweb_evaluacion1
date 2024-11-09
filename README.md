@@ -2,21 +2,21 @@
 Este repositorio es para una tarea de Programación Web
 
 ### Crear repositorio en GitHub
-1. Ve a [GitHub](https://github.com/) e inicia sesión.
-2. Haz clic en "New" para crear un repositorio nuevo y usa el prefijo `proweb_`.
-3. Marca la casilla para crear un `README.md` automáticamente.
+1. Ir a [GitHub](https://github.com/) e iniciar sesión.
+2. Hacer clic en "New" para crear un repositorio nuevo y usa el prefijo `proweb_`.
+3. Marcar la casilla para crear un `README.md` automáticamente.
 
 ![Captura de pantalla 2024-11-08 232704](https://github.com/user-attachments/assets/13ba89f0-5f57-4e89-a1c0-d489abb0fd0c)
 
 
 ### Agregar un colaborador
-1. Ve a "Settings" y selecciona "Collaborators".
-2. Busca el usuario `wilfredvasquez` y agrégalo como colaborador.
+1. Ir a "Settings" y seleccionar "Collaborators".
+2. Busca el usuario `wilfredvasquez` y agrégarlo como colaborador.
 ![Captura de pantalla 2024-11-08 232756](https://github.com/user-attachments/assets/5e9b65e5-aa55-4104-b2dd-5fc8f48c5b28)
 
 ### Crear ramas main, develop y staging
 Clona el repositorio:
-git clone https://github.com/tu_usuario/proweb_evaluacion1.git
+git clone https://github.com/kelvinmp/proweb_evaluacion1.git
 git checkout -b develop
 git push -u origin develop
 git checkout -b staging
