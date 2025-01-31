@@ -11,3 +11,8 @@ Este repositorio contiene la landing page desarrollada como parte de la Evaluaci
 - **README.md**: Información sobre el proyecto y el repositorio.
 
 La tarea consiste en crear una landing page utilizando únicamente HTML (sin CSS ni JavaScript).
+
+# Evaluación Nro. 3
+
+Lista la página! Es una página parecida a la de Genius en la que habla de una de mis canciones favoritas. Hay una sinopsis de la canción,
+un link para ver la canción, la letra de la canción en inglés y español, datos del propio Eminem y links a otras canciones populares suyas.
