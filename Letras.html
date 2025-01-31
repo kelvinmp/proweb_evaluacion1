@@ -3,50 +3,563 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can't Take My Eyes Off You</title>
+    <title>Mockingbird - Eminem</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        header h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+        header h4 {
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #b3b3b3;
+        }
+        .content {
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .item {
+            align-items: center;
+            display: flex;
+            margin: 0;
+        }
+        .details {
+            display: flex;
+            justify-content: space-around;
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        .details h4 {
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .details p {
+            font-weight: 400;
+            color: #666;
+        }
+        .details h3 {
+            font-weight: 600;
+            font-size: 1.4rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .details a {
+            margin-top: 10px;
+            display: inline-block;
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .details i {
+            padding-bottom: 17px;
+            padding-right: 5px;
+        }
+        .fecha {
+            align-items: center;
+            display: flex;
+            margin: 0;
+        }
+        .fa-pen-nib{
+            font-size: 1.5em;
+        }
+        .letra{
+            align-items: center;
+            display: flex;
+            margin: 0;
+            padding-bottom: 17px;
+            padding-right: 5px;
+        }
+        
+        button{
+            background-color: rgb(30, 48, 80);
+            border: none;
+            color: #ffffff;
+        }
+        button:hover{
+            background-color: rgb(39, 63, 104);
+        }
+        .btn-mio {
+            background-color: rgb(30, 48, 80);
+            padding: 10px 20px; 
+            border-radius: 10px;
+            font-size: 1.2em;
+            color: #ffffff;
+            border: none;
+            cursor: pointer; 
+            display: inline-block; 
+            text-align: center; 
+            margin: 0 auto; 
+            width: fit-content; 
+        }
+        .btn-mio:hover {
+            background-color: rgb(39, 63, 104);
+            color: rgb(39, 63, 104);
+        }
+        .lyrics {
+            background-color: white;
+            padding: 20px;
+            margin: 40px auto;
+            position: relative;
+        }
+        .lyrics p {
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            color: #333;
+            line-height: 1.5;
+        }
+        .fa-language {
+            color: #ffffff; 
+            background-color: rgb(30, 48, 80);  
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1.4em;
+        }
+        .fa-language:hover{
+            background-color: rgb(39, 63, 104);
+        }
+        .biografia, .otrascanciones {
+            padding: 40px 20px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .otrascanciones ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .otrascanciones ul li {
+            margin: 10px 0;
+        }
+        .otrascanciones ul li a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+        .otrascanciones ul li a:hover {
+            color: #007814ed;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Encabezado principal -->
+
+    <!-- Encabezado -->
     <header>
-        <h1>Can't Take My Eyes Off You</h1>
-        <h4>Song by: Frankie Valli</h4>
+        <h1>Mockingbird</h1>
+        <h4>Song by: Eminem</h4>
     </header>
 
-    <!-- Sección de contenido principal -->
-    <section>
-        <h3>Original Video Cover</h3>
-        <a href="https://www.youtube.com/watch?v=h3uh_f_UQl4" target="_blank">Ver en YouTube</a>
-        <br>
-        <img src="images/Stacey.jpg" alt="Imagen representativa de la canción" height="400">
+    <!-- Contenido principal -->
+    <section class="content">
+        <div class="col-md-4">
+            <img src="images/mockinbird.png" class="img-fluid rounded shadow-lg" width="400">
+        </div>
+        <!-- Detalles de la canción  -->
+        <div class="details">
+            <div class="col-md-5">
+                <div class="title">
+                    <h4>Mockingbird</h4>
+                    <p>Eminem</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-laptop"></i>
+                    <p>Productores: Luis Resto & Eminem</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-list"></i>
+                    <p>Álbum: Encore</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-drum"></i>
+                    <p>Género: Hip-Hop</p>
+                </div>
+                <div class="fecha">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>Lanzamiento: Nov 12, 2004</p>
+                </div>
+                <div>
+                    <h3>Canción Original</h3>
+                    <a href="https://www.youtube.com/watch?v=S9bCLPwzSC0" target="_blank" class="btn btn-danger btn-lg">
+                        🎵 Ver en YouTube
+                    </a>
+                </div>
+            </div>
+            <div class="Sinopsis">
+                <h2>Sinopsis:</h2>
+                <p>
+                    Posiblemente la canción de Eminem menos ofensiva, esta canción del álbum Encore está dirigida y dedicada a sus hijas. 
+                    Eminem reconoce que crecer con su imagen mediática y el problema de las drogas de Kim hizo que su educación fuera difícil, 
+                    sin mencionar sus comienzos afectados por la pobreza. La letra es un relato personal y manifiesto de su relación temprana 
+                    con su esposa e hijas. Los críticos elogiaron la canción por su letra. Esta canción mezcla un diálogo de rap original 
+                    sobre el matrimonio fallido de Eminem, mientras se disculpa con sus hijas con una versión melódica directa de la canción 
+                    de cuna tradicional “Mockingbird” llamada “Hush, Little Baby”.
+                </p>
+            </div>
+        </div>       
     </section>
-
     <hr>
-
     <!-- Letra de la canción -->
-    <section>
-        <h3>Letra:</h3>
-        <p>
-            You're just too good to be true, I can't take my eyes off you<br>
-            You'd be like heaven to touch, oh, I wanna hold you so much<br>
-            At long last love has arrived, and I thank God I'm alive<br>
-            You're just too good to be true, can't take my eyes off you.
-        </p>
-        <p>
-            Pardon the way that I stare<br>
-            There's nothin' else to compare<br>
-            The sight of you leaves me weak<br>
-            There are no words left to speak<br>
-            But if you feel like I feel<br>
-            Please let me know that it's real<br>
-            You're just too good to be true<br>
-            Can't take my eyes off of you.
-        </p>
+    <section class="lyrics">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="text-center mb-4">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h3>Letra:</h3>
+                </div>
+                <div class="btn-mio">
+                    <i class="fa-solid fa-language"></i>
+                    <button id="botoncambia">Cambiar a Español</button>
+                </div>
+                <!-- Letra en inglés -->
+                <div id="letraingles">
+                    <p>
+                        <br>
+                        [Intro]<br>
+                        Yeah<br>
+                        I know sometimes<br>
+                        Things may not always make sense to you right now<br>
+                        But hey<br>
+                        What Daddy always tell you?<br>
+                        Straighten up, little soldier<br>
+                        Stiffen up that upper lip<br>
+                        What you cryin' about?<br>
+                        You got me<br>
+                    </p>
+                    <p>
+                        [Verse 1]<br>
+                        Hailie, I know you miss your mom, and I know you miss your dad<br>
+                        When I'm gone, but I'm tryin' to give you the life that I never had<br>
+                        I can see you're sad, even when you smile, even when you laugh<br>
+                        I can see it in your eyes, deep inside you wanna cry<br>
+                        'Cause you're scared, I ain't there, Daddy's wit' you in your prayers<br>
+                        No more cryin', wipe them tears, Daddy's here, no more nightmares<br>
+                        We gon' pull together through it, we gon' do it<br>
+                        Lainie, Uncle's crazy, ain't he? Yeah, but he loves you, girl, and you better know it<br>
+                        We're all we got in this world when it spins, when it swirls<br>
+                        When it whirls, when it twirls, two little beautiful girls<br>
+                        Lookin' puzzled, in a daze, I know it's confusin' you<br>
+                        Daddy's always on the move, Mama's always on the news<br>
+                        I try to keep you sheltered from it, but somehow it seems<br>
+                        The harder that I try to do that, the more it backfires on me<br>
+                        All the things growin' up as Daddy that he had to see<br>
+                        Daddy don't want you to see, but you see just as much as he did<br>
+                        We did not plan it to be this way, your mother and me<br>
+                        But things have got so bad between us, I don't see us ever bein'<br>
+                        Together ever again, like we used to be when we was teenagers<br>
+                        But then, of course, everything always happens for a reason<br>
+                        I guess it was never meant to be<br>
+                        But it's just somethin' we have no control over, and that's what destiny is<br>
+                        But no more worries, rest your head and go to sleep<br>
+                        Maybe one day we'll wake up and this'll all just be a dream<br>
+                    </p>
+                    <p>
+                        [Chorus]<br>
+                        Now hush, little baby, don't you cry<br>
+                        Everything's gonna be alright<br>
+                        Stiffen that upper lip up, little lady, I told ya<br>
+                        Daddy's here to hold ya through the night<br>
+                        I know Mommy's not here right now and we don't know why<br>
+                        We feel how we feel inside<br>
+                        It may seem a little crazy, pretty baby<br>
+                        But I promise Mama's gon' be alright<br>
+                    </p>
+                    <p>
+                        [Verse 2]<br>
+                        Heh, it's funny<br>
+                        I remember back one year when Daddy had no money<br>
+                        Mommy wrapped the Christmas presents up and stuck 'em under the tree<br>
+                        And said some of 'em were from me 'cause Daddy couldn't buy 'em<br>
+                        I'll never forget that Christmas, I sat up the whole night crying<br>
+                        'Cause Daddy felt like a bum—see, Daddy had a job<br>
+                        But his job was to keep the food on the table for you and Mom<br>
+                        And at the time, every house that we lived in<br>
+                        Either kept gettin' broken into and robbed or shot up on the block<br>
+                        And your Mom was savin' money for you in a jar<br>
+                        Tryin' to start a piggy bank for you so you could go to college<br>
+                        Almost had a thousand dollars 'til someone broke in and stole it<br>
+                        And I know it hurt so bad it broke your Mama's heart<br>
+                        And it seemed like everything was just startin' to fall apart<br>
+                        Mom and Dad was arguin' a lot<br>
+                        So Mama moved back on to Chalmers in the flat, one-bedroom apartment<br>
+                        And Dad moved back to the other side of 8 Mile on Novara<br>
+                        And that's when Daddy went to California with his CD<br>
+                        And met Dr. Dre, and flew you and Mama out to see me<br>
+                        But Daddy had to work, you and Mama had to leave me<br>
+                        Then you started seein' Daddy on the TV<br>
+                        And Mama didn't like it<br>
+                        And you and Lainie were too young to understand it<br>
+                        Papa was a rolling stone, Mama developed a habit<br>
+                        And it all happened too fast for either one of us to grab it<br>
+                        I'm just sorry you were there and had to witness it firsthand<br>
+                        'Cause all I ever wanted to do was just make you proud<br>
+                        Now I'm sittin' in this empty house just reminiscin'<br>
+                        Lookin' at your baby pictures, it just trips me out<br>
+                        To see how much you both have grown, it's almost like you're sisters now<br>
+                        Wow, guess you pretty much are, and Daddy's still here<br>
+                        Lainie, I'm talkin' to you too, Daddy's still here<br>
+                        I like the sound of that, yeah, it's got a ring to it, don't it?<br>
+                        Shh, Mama's only gone for the moment<br>
+                    </p>
+                    <p>
+                        [Chorus]<br>
+                        Now hush, little baby, don't you cry<br>
+                        Everything's gonna be alright<br>
+                        Stiffen that upper lip up, little lady, I told ya<br>
+                        Daddy's here to hold ya through the night<br>
+                        I know Mommy's not here right now and we don't know why<br>
+                        We feel how we feel inside<br>
+                        It may seem a little crazy, pretty baby<br>
+                        But I promise Mama's gon' be alright<br>
+                    </p>
+                    <p>
+                        [Outro]<br>
+                        And if you ask me to, Daddy's gonna buy you a mockingbird<br>
+                        I'ma give you the world<br>
+                        I'ma buy a diamond ring for you, I'ma sing for you<br>
+                        I'll do anything for you to see you smile<br>
+                        And if that mockingbird don't sing and that ring don't shine<br>
+                        I'ma break that birdie's neck<br>
+                        I'll go back to the jeweler who sold it to ya<br>
+                        And make him eat every carat, don't fuck with Dad (Haha)<br>
+                    </p>
+                </div>
+                <!-- Letra en español (oculta por defecto) -->
+                <div id="letraespañol" style="display: none;">
+                    <p>
+                        <br>
+                        [Intro]<br>
+                        Ruiseñor<br>
+                        Sí, sé que a veces<br>
+                        Las cosas ya no deben tener sentido para ti<br>
+                        Pero, oye, ¿qué te dice siempre papá?<br>
+                        Firme, pequeño soldado<br>
+                        Sonríe<br>
+                        ¿Por qué estás llorando?<br>
+                        Me tienes a mí<br>
+                    </p>
+                    <p>
+                        [Verso 1]<br>
+                        Hailie, sé que extrañas a tu mamá y sé que extrañas a tu papá<br>
+                        Cuando no estoy, pero estoy tratando de darte la vida que yo nunca tuve<br>
+                        Puedo ver que estás triste, incluso cuando sonríes, incluso cuando te ríes<br>
+                        Puedo verlo en tus ojos, en el fondo quieres llorar<br>
+                        Porque tienes miedo, no estoy ahí, papá está contigo en tus oraciones<br>
+                        No más llorar, seca esas lágrimas, papá está aquí, no más pesadillas<br>
+                        Superaremos esto juntos, lo haremos<br>
+                        Lainie, el tío está loco, ¿no?<br>
+                        Sí, pero él te quiere, nena, y es mejor que lo sepas<br>
+                        Somos todo lo que tenemos en este mundo<br>
+                        Cuando gira, cuando se arremolina<br>
+                        Cuando se agita, cuando se voltea<br>
+                        Dos pequeñas niñas hermosas<br>
+                        Pareciendo desconcertadas, aturdidas<br>
+                        Sé que esto las confunde<br>
+                        Papá siempre está en movimiento, mamá siempre en las noticias<br>
+                        Trato de mantenerte alejada de eso, pero de algún modo parece<br>
+                        Que cuanto más intento hacerlo, más me sale mal<br>
+                        Todas las cosas que tu papá tuvo que ver mientras crecía<br>
+                        Papá no quería que las veas, pero ves tanto como lo hizo él<br>
+                        No planeamos que fuera así, tu madre y yo<br>
+                        Pero las cosas se pusieron tan mal entre nosotros<br>
+                        No nos veo estando juntos de nuevo<br>
+                        Como lo hacíamos cuando éramos adolescentes<br>
+                        Pero, por supuesto, todo siempre pasa por una razón<br>
+                        Supongo que nunca estuvo destinado a ser<br>
+                        Pero es solo algo de lo que no tenemos control y eso es el destino<br>
+                        Pero no te preocupes más, apoya la cabeza y duérmete<br>
+                        Quizás un día despertemos y todo esto solo sea un sueño<br>
+                    </p>
+                    <p>
+                        [Coro]<br>
+                        Ahora calla pequeña, no llores más,<br>
+                        todo saldrá bien,<br>
+                        endereza esos labios chica, te dije,<br>
+                        aquí esta papi para abrazarte fuerte toda la noche,<br>
+                        sé que mami no está aquí ahora y no sabemos por qué,<br>
+                        nos sentimos tal y como nos sentimos por dentro,<br>
+                        puede parecer un poco extraño, preciosa,<br>
+                        pero te prometo que mamá estará bien.<br>
+
+                    </p>
+                    <p>
+                        [Verso 2]<br>
+                        Es divertido,<br>
+                        recuerdo hace un año cuando papá no tenia dinero,<br>
+                        mami preparó los regalos de Navidad<br>
+                        y los puso bajo el árbol<br>
+                        y dijo que algunos de ellos eran de mi parte,<br>
+                        porque papi no podía comprarlos.<br>
+                        Nunca olvidé esas Navidades, lloré toda la noche,<br>
+                        porque papi se sentía como el culo.<br>
+                        Mira, ¡papá tiene un trabajo!<br>
+                        Pero su trabajo era<br>
+                        poder tener comida en la mesa para ti y mamá.<br>
+
+                        Y en todas las casas en las que íbamos viviendo<br>
+                        nos atracaban o robaban,<br>
+                        y tu madre estaba ahorrando un poco de dinero<br>
+                        para ti en una hucha,<br>
+                        en un cerdito para que pudieras ir al colegio,<br>
+                        casi tenía unos miles de dólares<br>
+                        hasta que alguien la rompió y los robó.<br>
+                        Sé que eso dolió y le rompió el corazón a mamá.<br>
+
+                        Y parecía que todo empezaba a distanciarse,<br>
+                        papá y mamá discutían mucho<br>
+                        y mamá se trasladó de nuevo a Chalmers<br>
+                        al apartamento de una habitación,<br>
+                        y papá volvió a mudarse al otro lado de 8 mile,<br>
+                        en Novara, y es cuando papá se fue a California con su CD<br>
+                        y conoció a Dr. Dre y tu y mamá volasteis para verme.<br>
+                        Pero papá tenía que trabajar,<br>
+                        tú y mamá teníais que dejarme<br>
+                        y es cuando empezaste a ver a tu padre en televisión<br>
+                        y a mama no le gustó.<br>
+
+                        Y tu y Laney erais demasiado jóvenes para entenderlo,<br>
+                        papá fue un pringado, mamá se enganchó al hábito,<br>
+                        y todo pasó demasiado rápido para todos<br>
+                        para poder comprenderlo, siento mucho que estuvieras allí<br>
+                        y tuvieras que ser testigo de todo,<br>
+                        porque todo lo que siempre he querido es hacerte sentir orgullosa.<br>
+
+                        Ahora estoy aquí sentado en esta casa vacía, tan sólo recordando,<br>
+                        mirando vuestras fotos de pequeñas, me commociona<br>
+                        ver como habéis crecido las dos,<br>
+                        es como si casi fuerais hermanas, wow,<br>
+                        pienso en lo guapas que debéis ser y papi aún esta aquí.<br>
+                        Laney, también hablo contigo, ¡papi aún está aquí!<br>
+                        Me gusta como suena eso, ¡sí!<br>
+                        Como anillo al dedo, ¿no? Shhh Mamá se ha marchado sólo un momento.
+                    </p>
+                    <p>
+                        [Outro]<br>
+                        Y si también me lo pides,<br>
+                        papi te comprará un ruiseñor,<br>
+                        te voy a dar el mundo entero,<br>
+                        te compraré un anillo de diamantes,<br>
+                        cantaré por ti,<br>
+                        voy a hacer cualquier cosa por ti, para ver tu sonrisa,<br>
+                        y si ese ruiseñor no canta y ese anillo no brilla,<br>
+                        voy a romperle el cuello a ese pájaro,<br>
+                        volveré al joyero que me vendió el anillo,<br>
+                        ¡y le haré comer cada quilate! ¡No jodas con papá! (jaja)<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Biografía de Eminem -->
+<section class="biografia">
+    <div class="item" style="display: flex; align-items: center; gap: 20px;">
+        <!-- Texto de la biografía -->
+        <div class="col-md-8">
+            <h2>Biografía de Eminem</h2>
+            <p>
+                Eminem, cuyo nombre real es <strong>Marshall Bruce Mathers III</strong>, es un rapero, productor y actor estadounidense. 
+                Nació el <strong>17 de octubre de 1972</strong> en St. Joseph, Missouri. Es considerado uno de los mejores raperos de 
+                todos los tiempos y ha vendido más de <strong>220 millones de discos</strong> en todo el mundo.
+            </p>
+            <p>
+                Eminem saltó a la fama a finales de los años 90 con su álbum <strong>"The Slim Shady LP"</strong>, que ganó un premio 
+                Grammy. Su estilo único, caracterizado por letras controvertidas y un flujo rápido, lo ha convertido en una figura 
+                icónica del hip-hop. Algunos de sus álbumes más destacados incluyen <strong>"The Marshall Mathers LP"</strong>, 
+                <strong>"The Eminem Show"</strong> y <strong>"Recovery"</strong>.
+            </p>
+            <p>
+                Además de su carrera musical, Eminem ha incursionado en el cine, protagonizando la película <strong>"8 Mile"</strong> 
+                (2002), por la cual ganó un premio Oscar por la canción <strong>"Lose Yourself"</strong>.
+            </p>
+        </div>
+        <!-- Imagen de Eminem -->
+        <div class="col-md-4">
+            <img src="images/eminem.jpg" alt="Eminem" style="height: 350px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+        </div>
+    </div>
+</section>
+
+    <!-- Lista de Canciones Populares -->
+    <section class="otrascanciones">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>Otras Canciones Populares de Eminem</h2>
+                <ul>
+                    <li><i class="fa-solid fa-link"></i><a href="https://www.youtube.com/watch?v=_Yhyp-_hX2s" target="_blank"> Lose Yourself</a></li>
+                    <li><i class="fa-solid fa-link"></i><a href="https://www.youtube.com/watch?v=gOMhN-hfMtY" target="_blank"> Stan (feat. Dido)</a></li>
+                    <li><i class="fa-solid fa-link"></i><a href="https://www.youtube.com/watch?v=eJO5HU_7_1w" target="_blank"> Without Me</a></li>
+                    <li><i class="fa-solid fa-link"></i><a href="https://www.youtube.com/watch?v=j5-yKhDd64s" target="_blank"> Not Afraid</a></li>
+                    <li><i class="fa-solid fa-link"></i><a href="https://www.youtube.com/watch?v=uelHwf8o7_U" target="_blank"> Love the Way You Lie (feat. Rihanna)</a></li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <!-- Pie de página (footer) -->
     <footer>
-        <p>© 2024, Tu Nombre</p>
-        <p>Este proyecto es parte de la Evaluación Nro. 2 para el curso de HTML.</p>
+        <p>Kelvin Alejandro Moya Pochet. 2025</p>
+        <p>Este proyecto es parte del curso de programación web dictado por el profesor Wilfred Vasquez.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/3864ee3a7d.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/3864ee3a7d.js" crossorigin="anonymous"></script>
+
+    <!-- Script para cambiar la letra -->
+    <script>
+        const toggleButton = document.getElementById('botoncambia');
+        const englishLyrics = document.getElementById('letraingles');
+        const spanishLyrics = document.getElementById('letraespañol');
+
+        toggleButton.addEventListener('click', () => {
+            if (englishLyrics.style.display === 'none') {
+                englishLyrics.style.display = 'block';
+                spanishLyrics.style.display = 'none';
+                toggleButton.textContent = 'Cambiar a Español';
+            } else {
+                englishLyrics.style.display = 'none';
+                spanishLyrics.style.display = 'block';
+                toggleButton.textContent = 'Cambiar a Letra Original';
+            }
+        });
+    </script>
 </body>
 </html>
