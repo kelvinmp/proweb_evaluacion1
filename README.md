@@ -16,3 +16,13 @@ La tarea consiste en crear una landing page utilizando únicamente HTML (sin CSS
 
 Lista la página! Es una página parecida a la de Genius en la que habla de una de mis canciones favoritas. Hay una sinopsis de la canción,
 un link para ver la canción, la letra de la canción en inglés y español, datos del propio Eminem y links a otras canciones populares suyas.
+
+# Evaluación Nro. 4 
+
+Ya se puede ver la página a través del siguiente enlace: https://kelvinmp.github.io/proweb_evaluacion1/
+
+# Evaluación Nro. 5
+
+Creé una sección llamada API Pokemon donde muestro la lista de items de una api pública de pokemon. Con su paginación.
+Al darle click al item pueda ver el detalle de ese item. 
+Tambien tiene un botón para ver más items que en este caso son pokemones
