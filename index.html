@@ -169,6 +169,13 @@
         .otrascanciones ul li a:hover {
             color: #007814ed;
         }
+        .pokemon-item {
+            cursor: pointer;
+            margin: 5px 0;
+        }
+        #pokemon-details {
+            margin-top: 20px;
+        }
         footer {
             background-color: #1a1a1a;
             color: white;
@@ -532,6 +539,14 @@
             </div>
         </div>
     </section>
+    <!--Sección API-->
+    <section class="biografia">
+        <h2>API de Pokemon</h2>
+        <p> La lista de items de la API de pokemon pública (al darle click al item pueden ver detalles de ese item.)</p>
+    <div id="pokemon-list"></div>
+    <button id="load-more">Cargar más</button>
+    <div id="pokemon-details"></div>
+    </section>
 
     <footer>
         <p>Kelvin Alejandro Moya Pochet. 2025</p>
@@ -560,6 +575,69 @@
                 toggleButton.textContent = 'Cambiar a Letra Original';
             }
         });
-    </script>
+
+        
+        let currentPage = 0;
+
+        async function fetchPokemons(page) {
+            try {
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${page * 20}&limit=20`);
+                if (!response.ok) {
+                    throw new Error("Could not fetch resource");
+                }
+                const data = await response.json();
+                return data.results;
+            } catch (error) {
+                console.error("Error fetching pokemons:", error);
+                return [];
+            }
+        }
+
+        async function loadPokemons() {
+            const pokemons = await fetchPokemons(currentPage);
+            const pokemonList = document.getElementById("pokemon-list");
+
+            pokemons.forEach(pokemon => {
+                const pokemonItem = document.createElement("div");
+                pokemonItem.className = "pokemon-item";
+                pokemonItem.textContent = pokemon.name;
+                pokemonItem.onclick = () => loadPokemonDetails(pokemon.name);
+                pokemonList.appendChild(pokemonItem);
+            });
+
+            currentPage++;
+        }
+
+        async function fetchPokemonDetails(name) {
+            try {
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
+                if (!response.ok) {
+                    throw new Error("Could not fetch resource");
+                }
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error("Error fetching pokemon details:", error);
+                return null;
+            }
+        }
+
+        async function loadPokemonDetails(name) {
+            const pokemon = await fetchPokemonDetails(name);
+            const pokemonDetails = document.getElementById("pokemon-details");
+            if (pokemon) {
+                pokemonDetails.innerHTML = `
+                    <h2>${pokemon.name}</h2>
+                    <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+                    <p><strong>Altura:</strong> ${pokemon.height}</p>
+                    <p><strong>Peso:</strong> ${pokemon.weight}</p>
+                `;
+            } else {
+                pokemonDetails.innerHTML = "<p>Error al cargar los detalles del Pokémon.</p>";
+            }
+        }
+        document.getElementById("load-more").onclick = loadPokemons;
+        loadPokemons();
+        </script>
 </body>
 </html>
